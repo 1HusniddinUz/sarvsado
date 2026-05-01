@@ -1,0 +1,217 @@
+/* =========================================
+   PRODUCTS - LIGHT PREMIUM & SPACIOUS
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+.products-page-container {
+    padding: 140px 5% 120px;
+    background-color: #ffffff; /* Toza oq fon */
+    min-height: 100vh;
+    color: #2c2c2c; /* Juda to'q kulrang/qora matnlar */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- KENG HAQIQIY HEADER --- */
+.products-header {
+    text-align: center;
+    margin-bottom: 100px; /* Sarlavha va grid orasida katta havo qoldiramiz */
+}
+
+.header-subtitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #a8816c; /* Jigarrang/Tillarang estetikasi */
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.products-main-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem; /* Sarlavha juda katta va klassik */
+    font-weight: 400;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.title-divider {
+    width: 80px;
+    height: 1px;
+    background-color: #a8816c;
+    margin: 30px auto;
+}
+
+.products-desc {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- GRID (2 ta qatorda havodor) --- */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px 60px; /* Kartalar orasida juda katta joy (Nafas olishi uchun) */
+    max-width: 1400px; /* Ekranni yaxshi to'ldirishi uchun */
+    margin: 0 auto;
+}
+
+/* --- LUXURY KARTA --- */
+.luxury-product-card {
+    display: flex;
+    flex-direction: column;
+    /* Kartaga border o'rniga, faqat pastki qismiga chiziq beramiz (Elegant uslub) */
+    background: transparent;
+    transition: transform 0.4s ease;
+}
+
+/* --- RASM QISMI --- */
+.card-image-box {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Gorizontalroq, kinematografik rasm */
+    overflow: hidden;
+    position: relative;
+    background-color: #f8f8f8;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.luxury-product-card:hover .card-image {
+    transform: scale(1.04);
+}
+
+/* Kichik estetik detal: Rasmning yuqori o'ng burchagidagi oq geometrik qirqim */
+.corner-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    /* Uchburchak shakl yordamida qirqim effekti */
+    clip-path: polygon(100% 0, 0 0, 100% 100%); 
+}
+
+/* --- KARTA MATN QISMI --- */
+.card-content-wrapper {
+    padding: 30px 0 0 0; /* Faqat tepadan joy, yondan emas */
+    border-bottom: 1px solid rgba(168, 129, 108, 0.2); /* Tagidagi oqlangan chiziq */
+    padding-bottom: 25px;
+}
+
+.card-top-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-category {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #a8816c; /* Jigarrang urg'u */
+    text-transform: uppercase;
+}
+
+.card-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: #999;
+}
+
+.card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+.card-bottom-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Batafsil tugmasi uzun chiziq bilan */
+.discover-btn {
+    background: none;
+    border: none;
+    color: #a8816c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.discover-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.luxury-product-card:hover .discover-btn {
+    color: #1a1a1a;
+}
+
+.luxury-product-card:hover .discover-btn svg {
+    transform: translateX(8px); /* Sichqoncha borganda yoy uzayadi/siljiydi */
+}
+
+/* --- MOBIL RESPONSIVE --- */
+@media (max-width: 992px) {
+    .products-main-title {
+        font-size: 3.5rem;
+    }
+    
+    .products-grid {
+        gap: 60px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-page-container {
+        padding: 100px 5% 80px;
+    }
+
+    .products-main-title {
+        font-size: 2.8rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr; /* Telefonda 1 ta ustun */
+        gap: 50px;
+        max-width: 500px;
+    }
+    
+    .card-image-box {
+        aspect-ratio: 1 / 1; /* Kvadrat rasm telefon uchun qulayroq */
+    }
+}

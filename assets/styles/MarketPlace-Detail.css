@@ -1,0 +1,291 @@
+/* =========================================
+   MARKET DETAIL - PREMIUM DARK GLASSMORPHISM
+   ========================================= */
+
+.market-detail-container {
+    padding: 120px 5% 100px;
+    min-height: 100vh;
+    background-color: #121212; /* MarketPlace bilan bir xil to'q fon */
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* --- HEADER QISMI --- */
+.market-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    color: #a0a0a0; /* Ochiqroq kulrang */
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.back-btn .arrow {
+    transition: transform 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #c5a880; /* Tillarang */
+}
+
+.back-btn:hover .arrow {
+    transform: translateX(-5px);
+}
+
+.market-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.market-title .highlight {
+    font-style: italic;
+    color: #c5a880; /* Tillarang urg'u */
+    text-shadow: 0 0 15px rgba(197, 168, 128, 0.4); /* Yengil nurlanish */
+}
+
+.title-divider {
+    width: 60px;
+    height: 2px;
+    background-color: #c5a880;
+    margin: 20px auto 0;
+    box-shadow: 0 0 10px rgba(197, 168, 128, 0.5);
+}
+
+/* --- MAHSULOTLAR GRIDI --- */
+.pro-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* --- PRO KARTOCHKA (GLASSMORPHISM) --- */
+.pro-product-card {
+    background: rgba(30, 30, 30, 0.6); /* Shisha effekti uchun yarim shaffof qora */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pro-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 0 1px #c5a880, /* Hoverda chetidan tillarang nur yuguradi */
+        0 0 20px rgba(197, 168, 128, 0.2);
+}
+
+/* --- RASM VA OVERLAY --- */
+.pro-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background-color: rgba(0, 0, 0, 0.3); /* Rasm tagidagi qorong'u fon */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pro-product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: brightness(0.9); /* Qorong'u dizaynda rasm ko'zni qamashtirmasligi uchun */
+}
+
+.pro-product-card:hover .pro-product-image {
+    transform: scale(1.08);
+    filter: brightness(1.1); /* Sichqoncha borganda rasm yorishadi */
+}
+
+/* Badge (Yangi / Chegirma) */
+.pro-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(135deg, #c5a880, #a3875f);
+    color: #121212;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(197, 168, 128, 0.4);
+}
+
+/* Yurakcha tugmasi */
+.wishlist-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.wishlist-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s ease, fill 0.2s ease, stroke 0.2s ease;
+}
+
+.wishlist-btn:hover {
+    border-color: #ff4757;
+    background: rgba(255, 71, 87, 0.1);
+}
+
+.wishlist-btn:hover svg {
+    fill: #ff4757;
+    stroke: #ff4757;
+    transform: scale(1.1);
+}
+
+/* Rasm ustidan chiqadigan tugma (Quick Action) */
+.quick-action {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    transition: bottom 0.4s ease;
+    z-index: 2;
+}
+
+.pro-product-card:hover .quick-action {
+    bottom: 0;
+}
+
+.quick-buy-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(90deg, #c5a880, #d4b895);
+    color: #121212;
+    padding: 12px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(197, 168, 128, 0.3);
+}
+
+.quick-buy-btn:hover {
+    box-shadow: 0 5px 25px rgba(197, 168, 128, 0.6);
+    transform: translateY(-2px);
+}
+
+/* --- MAHSULOT MA'LUMOTLARI --- */
+.pro-product-info {
+    padding: 20px;
+    background: transparent; /* Fonni o'chiramiz, chunki kartaning o'zi shisha */
+}
+
+.pro-category {
+    font-size: 0.75rem;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.pro-product-name {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.pro-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pro-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #c5a880; /* Narx yana tillarangda chiqib turadi */
+    text-shadow: 0 0 10px rgba(197, 168, 128, 0.2);
+}
+
+/* Savatcha iconkasi */
+.cart-icon-btn {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.cart-icon-btn:hover {
+    background: rgba(197, 168, 128, 0.2);
+    border-color: #c5a880;
+    color: #c5a880;
+    transform: scale(1.05);
+}
+
+/* --- MOBIL MOSLASHUV --- */
+@media (max-width: 768px) {
+    .market-detail-container {
+        padding: 90px 5% 60px;
+    }
+    
+    .market-title {
+        font-size: 2.2rem;
+    }
+    
+    .pro-products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 25px;
+    }
+    
+    .quick-action {
+        display: none; 
+    }
+}

@@ -1,0 +1,219 @@
+/* =========================================
+   ABOUT - EDITORIAL & MINIMALIST STYLE
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@400;500;600;700&display=swap');
+
+.editorial-about-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 120px 8%;
+  background-color: #f4efea; /* Rasmdagi estetik och fon */
+  min-height: 100vh;
+  color: #8c6b5d; /* Yozuvlar uchun to'q qizg'ish-jigarrang (mis) rangi */
+  gap: 40px;
+}
+
+/* --- UMUMIY USTUN SOZLAMALARI --- */
+.about-col-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-col-center {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+}
+
+.about-col-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* =========================================
+   CHAP USTUN (Yozuvlar va Social)
+   ========================================= */
+.about-name-box {
+  margin-top: 20px;
+}
+
+.about-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+}
+
+.about-role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.about-experience {
+  margin: 60px 0;
+  max-width: 80%;
+}
+
+.about-experience p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-socials {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.about-socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #8c6b5d;
+  color: #f4efea;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.about-socials a:hover {
+  transform: translateY(-5px);
+  background-color: #6e5246;
+}
+
+/* =========================================
+   MARKAZIY USTUN (Katta Rasm)
+   ========================================= */
+.main-image-wrapper {
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  overflow: hidden;
+  /* Rasmdagi gumbaz (arka) shaklini berish uchun */
+  border-radius: 200px 200px 20px 20px; 
+  box-shadow: 0 20px 40px rgba(140, 107, 93, 0.15);
+}
+
+.main-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================
+   O'NG USTUN (Aloqa va Kichik rasm)
+   ========================================= */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  width: 100%;
+}
+
+.contact-list li {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-list .arrow {
+  font-size: 1.2rem;
+}
+
+.contact-list a {
+  text-decoration: none;
+  color: #8c6b5d;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.contact-list a:hover {
+  opacity: 0.7;
+}
+
+.secondary-image-wrapper {
+  width: 100%;
+  max-width: 280px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 40px 0;
+  box-shadow: 0 15px 30px rgba(140, 107, 93, 0.15);
+}
+
+.secondary-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.see-more-link {
+  text-decoration: none;
+  color: #8c6b5d;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.see-more-link:hover {
+  transform: translateX(5px);
+}
+
+/* =========================================
+   MOBIL VA PLANSCHET UCHUN MOSLASHUV
+   ========================================= */
+@media (max-width: 1024px) {
+  .editorial-about-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 5%;
+    gap: 60px;
+  }
+
+  .about-col-left, .about-col-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-experience {
+    margin: 40px 0;
+  }
+
+  .contact-list li {
+    justify-content: center;
+  }
+
+  .main-image-wrapper {
+    height: 500px;
+  }
+}

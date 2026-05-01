@@ -1,0 +1,17 @@
+/* Asosiy kontent navbar tagida qolib ketmasligi uchun */
+.app_content {
+    /* Desktopda navbarimiz balandligi 90px edi, shuning uchun tepadagi kontentni 90px pastga suramiz */
+    padding-top: 90px; 
+    
+    /* Sahifa kontenti kam bo'lsa ham, footer (agar bo'lsa) eng pastda turishi uchun */
+    min-height: 100vh; 
+    box-sizing: border-box;
+}
+
+/* Mobile xolat uchun (768px dan pastda) */
+@media (max-width: 768px) {
+    .app_content {
+        /* Mobilda navbarimiz balandligi 70px ga tushgan edi */
+        padding-top: 70px; 
+    }
+}

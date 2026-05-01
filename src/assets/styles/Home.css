@@ -1,0 +1,354 @@
+/* Home.css */
+
+/* Shriftlarni ulash - Montserrat va Dancing Script */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* Asosiy containerni to'liq balandlikka sozlash */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Agar navbar bo'lsa, uni inobatga olgan holda balandlik */
+}
+
+/* Hero sectionni sozlash - fon rasmini shu yerda belgilaymiz */
+.hero-section {
+  position: relative;
+  flex-grow: 1; /* Qolgan balandlikni to'liq qamrab olish */
+  background-image: url('../../assets/images/hotel.webp'); /* Fon rasmini o'rnating */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  height: 90vh;
+}
+
+/* Dark overlayni yaratish - rasmni xiralashtirish va soyalash uchun */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 27, 35, 0.322); /* Rasm ustidagi quyuqroq ko'k-yashil soya */
+  z-index: 1;
+}
+
+/* Kontentni overlaydan ustiga joylashtirish */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Matnlar orasidagi masofa */
+}
+
+/* Sans-serif shrifti (WELCOME TO, RESORT & SPA HOTEL, LEARN MORE) */
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 2.5px; /* Harflar orasidagi masofani kengaytirish */
+  text-transform: uppercase; /* Barcha harflarni katta qilish */
+  margin: 0;
+}
+
+/* Kalligrafik shrift (The Grand) */
+.hero-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 8rem; /* Katta o'lcham */
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+/* "Learn More" buttonni sozlash */
+.learn-more-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #123652; /* Quyuq ko'k rang */
+  background-color: white; /* Oq fon */
+  border: none;
+  padding: 15px 40px;
+  border-radius: 4px; /* Kichik burchak */
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 30px;
+}
+
+/* Button ustiga sichqoncha borgandagi effekt (hover effect) */
+.learn-more-btn:hover {
+  background-color: #f0f8ff; /* Eng och ko'k rang */
+  color: #0b253b; /* Quyuqroq ko'k rang */
+}
+
+/* Mobile qurilmalar uchun moslashtirish (responsive design) */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .learn-more-btn {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/* =========================================
+   2-QISM: LUXURY SUITES (Yangi Qo'shilgan)
+   ========================================= */
+
+.suites-section {
+  padding: 100px 5%;
+  background-color: #fcfcfc; /* Juda ochiq kulrang/oq fon, toza ko'rinish uchun */
+  color: #123652; /* Hero qismidagi logikani davom ettiruvchi to'q ko'k rang */
+}
+
+/* Sarlavhalar markazi */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-script-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #c5a880; /* Premium tilla/qum rangi */
+  margin-bottom: -15px; /* Pastki yozuvga yaqinlashtirish */
+}
+
+.section-main-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+/* Sarlavha tagidagi nafis chiziqcha */
+.title-divider {
+  width: 60px;
+  height: 2px;
+  background-color: #c5a880;
+  margin: 20px auto 0;
+}
+
+/* Xonalar Grid qismi */
+.suites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Yonma-yon 3 ta karta */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Kartochka dizayni */
+.suite-card {
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Yengil soya */
+  transition: transform 0.4s ease;
+  overflow: hidden;
+}
+
+.suite-card:hover {
+  transform: translateY(-10px); /* Sichqoncha borganda sal tepaga ko'tariladi */
+}
+
+/* Kartochka rasmi */
+.suite-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+/* Rasmga hover effekti */
+.suite-card:hover .suite-image {
+  transform: scale(1.05); /* Rasm biroz yaqinlashadi */
+}
+
+/* Kartochka ichidagi matnlar */
+.suite-info {
+  padding: 30px 20px;
+  text-align: center;
+  background: #fff;
+  position: relative; /* Rasm ustiga chiqmasligi uchun */
+  z-index: 2;
+}
+
+.suite-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.suite-info p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* "Explore Room" havolasi */
+.explore-link {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #c5a880;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.explore-link span {
+  transition: margin-left 0.3s ease;
+}
+
+.explore-link:hover {
+  color: #123652;
+}
+
+.explore-link:hover span {
+  margin-left: 8px; /* Strella o'ngga suriladi */
+}
+
+/* Mobile responsivlik */
+@media (max-width: 992px) {
+  .suites-grid {
+    grid-template-columns: repeat(2, 1fr); /* Planshetda 2 ta */
+  }
+}
+
+@media (max-width: 768px) {
+  .suites-grid {
+    grid-template-columns: 1fr; /* Telefonda 1 ta */
+  }
+  .section-script-title {
+    font-size: 3rem;
+  }
+  .section-main-title {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* =========================================
+   3-QISM: THE EXPERIENCE (Qisqacha About)
+   ========================================= */
+
+.experience-section {
+  padding: 120px 5%;
+  background-color: #ffffff; /* Toza oq fon, Suites qismidan (och kulrangdan) ajralib turishi uchun */
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 80px; /* Rasm va matn orasidagi katta bo'shliq (havo) */
+}
+
+/* Rasm qismi dizayni */
+.experience-image-wrapper {
+  flex: 1;
+  position: relative; /* Badge uchun */
+}
+
+.experience-image {
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* Premium yumshoq soya */
+}
+
+/* Rasm burchagidagi qimmatbaho nishon (Badge) */
+.experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background-color: #123652; /* Quyuq ko'k */
+  color: #c5a880; /* Tillarang */
+  padding: 25px 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 20px rgba(18, 54, 82, 0.2);
+}
+
+/* Matn qismi dizayni */
+.experience-content {
+  flex: 1;
+}
+
+/* Sarlavhalarni chapga taqash uchun yordamchi klasslar */
+.left-align {
+  text-align: left;
+  margin-left: 0;
+}
+
+/* Biz avval markazlashtirgan dividerni bu yerda chapga suramiz */
+.title-divider.left-align {
+  margin: 20px 0 30px 0;
+}
+
+/* Asosiy matn */
+.experience-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Tugmani qoramtir uslubga o'zgartirish */
+.dark-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #123652;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.dark-btn:hover {
+  background-color: #c5a880;
+  color: #fff;
+}
+
+/* =========================================
+   RESPONSIVE (Mobil va Planshet)
+   ========================================= */
+@media (max-width: 992px) {
+  .experience-container {
+    flex-direction: column; /* Planshetda rasm tepada, matn pastda bo'ladi */
+    gap: 50px;
+  }
+  
+  .experience-badge {
+    bottom: -15px;
+    right: 20px; /* Ekrandan chiqib ketmasligi uchun */
+  }
+}

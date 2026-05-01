@@ -1,0 +1,200 @@
+/* =========================================
+   CONTACT - DARK PREMIUM STYLE
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap');
+
+.contact-page-container {
+    background-color: #0f0f0f; /* Rasmdagi o'ta qora fon */
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- KALLIGRAFIK SARLAVHA --- */
+.contact-script-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: #c5a880; /* Tillarang/Champagne */
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+/* --- MA'LUMOTLAR QATORI --- */
+.contact-info-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 80px;
+}
+
+.info-block {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* O'rtadagi blokning ikkita yonidagi oltin chiziqlar */
+.center-block {
+    border-left: 1px solid rgba(197, 168, 128, 0.4);
+    border-right: 1px solid rgba(197, 168, 128, 0.4);
+}
+
+.info-icon {
+    font-size: 2rem;
+    color: #c5a880;
+    margin-bottom: 15px;
+    /* Agar o'zingizda SVG ikonka bo'lsa shu yerga joylaysiz, hozircha emoji qo'ydim */
+}
+
+.info-block h3 {
+    font-size: 0.9rem;
+    color: #c5a880;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.info-block p {
+    font-size: 0.85rem;
+    color: #888888;
+    margin: 5px 0;
+}
+
+/* --- FORMA QISMI --- */
+.contact-form-section {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.form-subtitle {
+    font-size: 0.8rem;
+    color: #c5a880;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.dark-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dark-form input,
+.dark-form textarea {
+    width: 100%;
+    background-color: #1a1a1a; /* To'q kulrang input foni */
+    border: none;
+    padding: 18px 20px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.dark-form input::placeholder,
+.dark-form textarea::placeholder {
+    color: #666666;
+}
+
+.dark-form input:focus,
+.dark-form textarea:focus {
+    background-color: #252525;
+    border-left: 3px solid #c5a880; /* Fokuslanganda oltin chiziqcha chiqadi */
+}
+
+/* HTML5 da type="number" dagi strelkalarni olib tashlash */
+.dark-form input[type=number]::-webkit-inner-spin-button, 
+.dark-form input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.submit-btn {
+    background-color: #c5a880;
+    color: #0f0f0f;
+    border: none;
+    padding: 15px 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin: 20px auto 0;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.submit-btn:hover {
+    background-color: #d4b895;
+    transform: translateY(-3px);
+}
+
+/* --- IJTIMOIY TARMOQLAR --- */
+.contact-social-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.social-icons-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gold-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: #c5a880;
+    color: #0f0f0f;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.gold-icon:hover {
+    transform: scale(1.1);
+}
+
+/* --- XARITA QISMI --- */
+.dark-map-container {
+    width: 100%;
+    /* Google map ni oq rangdan qora (dark mode) ga o'zgartiradigan sehrli kod */
+    filter: grayscale(100%) invert(92%) contrast(83%);
+}
+
+/* --- MOBIL RESPONSIVE --- */
+@media (max-width: 768px) {
+    .contact-info-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .center-block {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid rgba(197, 168, 128, 0.4);
+        border-bottom: 1px solid rgba(197, 168, 128, 0.4);
+        padding: 40px 0;
+    }
+
+    .contact-form-section {
+        padding: 0 5%;
+    }
+}

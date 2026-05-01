@@ -1,0 +1,77 @@
+
+
+/* =========================================
+   ENG PASTKI QISM (Copyright)
+   ========================================= */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #050505; /* Asosiy qismdan biroz qoraroq */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 1rem;
+    color: #777;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-bottom-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: #c5a880;
+}
+
+/* =========================================
+   RESPONSIVE (Mobil va Planshet)
+   ========================================= */
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr; /* Planshetda 2 ta ustun */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Telefonda 1 ta ustun */
+        text-align: center;
+        gap: 50px;
+    }
+    
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%); /* Chiziqni markazga olish */
+    }
+
+    .footer-desc {
+        max-width: 100%;
+    }
+
+    .social-icons {
+        align-items: center;
+    }
+
+    .footer-links a:hover {
+        transform: translateY(-3px); /* Mobilda o'ngga emas, tepaga ko'tarilsin */
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
